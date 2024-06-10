@@ -136,11 +136,11 @@ class ViewController: UIViewController {
         let tag = sender.view?.tag ?? 19
         for label in actionLabels {
             label.clipsToBounds = true
-            label.backgroundColor = .systemOrange
-            label.textColor = .white
+            label.backgroundColor = UIColor(red: 52 / 255, green: 52 / 255, blue: 52 / 255, alpha: 1.0)
+            label.textColor = .systemGreen
         }
-        actionLabels[tag - 15].backgroundColor = .white
-        actionLabels[tag - 15].textColor = .systemOrange
+        actionLabels[tag - 15].backgroundColor = .systemGreen
+        actionLabels[tag - 15].textColor = UIColor(red: 52 / 255, green: 52 / 255, blue: 52 / 255, alpha: 1.0)
         switch tag {
         case 15:
             let flag = (previousOper == "*" || previousOper == "/")
@@ -274,9 +274,9 @@ class ViewController: UIViewController {
     private func redrawActionLabels() {
         for label in actionLabels {
             label.clipsToBounds = true
-            label.layer.cornerRadius = 40
-            label.backgroundColor = .systemOrange
-            label.textColor = .white
+            label.layer.cornerRadius = 12
+            label.backgroundColor = UIColor(red: 52 / 255, green: 52 / 255, blue: 52 / 255, alpha: 1.0)
+            label.textColor = .systemGreen
         }
     }
     
